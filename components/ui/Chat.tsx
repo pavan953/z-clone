@@ -1,6 +1,5 @@
 'use client';
-import { useState } from 'react';
-
+import React,{ useState } from 'react';
 interface Message {
   user: string;
   text: string;
@@ -23,9 +22,13 @@ const Chat: React.FC<ChatProps> = ({ onClose }) => {
   };
 
   return (
-    <div className="relative p-4 rounded-lg bg-gray-800 h-100"> 
+    <div className="relative p-4 rounded-lg bg-gray-800 h-full max-w-sm mx-auto">
       <div className="absolute top-2 right-2">
-        <button onClick={onClose} className="text-red-500" aria-label="Close chat">
+        <button
+          onClick={onClose}
+          className="text-red-500 font-bold"
+          aria-label="Close chat"
+        >
           X
         </button>
       </div>
@@ -44,7 +47,10 @@ const Chat: React.FC<ChatProps> = ({ onClose }) => {
           className="flex-1 p-2 rounded-lg text-black"
           placeholder="Type a message..."
         />
-        <button onClick={handleSend} className="bg-gray-900 text-white p-2 rounded-lg">
+        <button
+          onClick={handleSend}
+          className="bg-gray-900 text-white p-2 rounded-lg"
+        >
           Send
         </button>
       </div>
