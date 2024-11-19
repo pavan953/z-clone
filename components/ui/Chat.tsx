@@ -22,7 +22,7 @@ const Chat: React.FC<ChatProps> = ({ onClose }) => {
   };
 
   return (
-    <div className="relative p-4 rounded-lg bg-gray-800 h-full max-w-sm mx-auto">
+    <div className="relative p-4 rounded-lg bg-gray-800 h-full max-w-sm mx-auto flex flex-col">
       <div className="absolute top-2 right-2">
         <button
           onClick={onClose}
@@ -32,7 +32,7 @@ const Chat: React.FC<ChatProps> = ({ onClose }) => {
           X
         </button>
       </div>
-      <div className="h-64 overflow-y-auto mb-2">
+      <div className="h-64 overflow-y-auto mb-2 flex-grow">
         {messages.map((msg, index) => (
           <div key={index} className="text-white mb-1">
             <strong>{msg.user}:</strong> {msg.text}
