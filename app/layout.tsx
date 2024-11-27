@@ -12,7 +12,7 @@ import { Toaster } from "@/components/ui/toaster";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "YOOM",
+  title: "SKYHUB",
   description: "Video calling App",
   icons: {
     icon: "/icons/logo.svg",
@@ -39,7 +39,10 @@ export default function RootLayout({
           },
         }}
       >
-        <body className={`${inter.className} bg-dark-2`}>
+        {/* add the gradient colors at the bottom right of color sky blue and rest let it be same color  */}
+        
+        <body className={`${inter.className} bg-gradient-to-r from-[#161b22] to-[#0d1117] via-[#4a96f3]` }>
+          
           <Analytics/>
           <Toaster />
           {children}

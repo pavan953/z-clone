@@ -20,7 +20,7 @@ const MeetingPage = () => {
   if (!isLoaded || isCallLoading) return <Loader />;
 
   if (!call) return (
-    <p className="text-center text-3xl font-bold text-white">
+    <p className="text-center text-3xl font-bold text-[#c9d1d9]">
       Call Not Found
     </p>
   );

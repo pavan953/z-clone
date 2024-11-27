@@ -11,8 +11,8 @@ interface PermissionCardProps {
 
 const Alert = ({ title, iconUrl }: PermissionCardProps) => {
   return (
-    <section className="flex-center h-screen w-full">
-      <Card className="w-full max-w-[520px] border-none bg-dark-1 p-6 py-9 text-white">
+    <section className="grid place-items-center h-screen w-full bg-gray-100">
+      <Card className="w-full max-w-[520px] border-none bg-transparent p-6 py-9 text-[#c9d1d9]">
         <CardContent>
           <div className="flex flex-col gap-9">
             <div className="flex flex-col gap-3.5">

@@ -26,7 +26,7 @@ const MeetingTypeList = () => {
     'isScheduleMeeting' | 'isJoiningMeeting' | 'isInstantMeeting' | undefined
   >(undefined);
   const [values, setValues] = useState(initialValues);
-  const [callDetail, setCallDetail] = useState<Call>();
+  const [callDetail, setCallDetail] = useState<Call | undefined>(undefined);
   const client = useStreamVideoClient();
   const { user } = useUser();
   const { toast } = useToast();
@@ -75,27 +75,28 @@ const MeetingTypeList = () => {
         img="/icons/add-meeting.svg"
         title="New Meeting"
         description="Start an instant meeting"
+        className="bg-[#0d1117] text-[#c9d1d9] border-4 border-blue-500  glow-effect hover:shadow-lg hover:border-blue-200  "
         handleClick={() => setMeetingState('isInstantMeeting')}
       />
       <HomeCard
         img="/icons/join-meeting.svg"
         title="Join Meeting"
         description="via invitation link"
-        className="bg-blue-1"
+        className="bg-[#0d1117] text-[#c9d1d9] border-4 border-blue-500  glow-effect hover:shadow-lg hover:border-blue-200 "
         handleClick={() => setMeetingState('isJoiningMeeting')}
       />
       <HomeCard
         img="/icons/schedule.svg"
         title="Schedule Meeting"
         description="Plan your meeting"
-        className="bg-purple-1"
+        className="bg-[#0d1117] text-[#c9d1d9] border-4 border-blue-500  glow-effect hover:shadow-lg hover:border-blue-200 "
         handleClick={() => setMeetingState('isScheduleMeeting')}
       />
       <HomeCard
         img="/icons/recordings.svg"
         title="View Recordings"
         description="Meeting Recordings"
-        className="bg-yellow-1"
+        className="bg-[#0d1117] text-[#c9d1d9] border-4 border-blue-500 glow-effect hover:shadow-lg hover:border-blue-200 "
         handleClick={() => router.push('/recordings')}
       />
 
@@ -106,7 +107,7 @@ const MeetingTypeList = () => {
           title="Create Meeting"
           handleClick={createMeeting}
         >
-          <div className="flex flex-col gap-2.5">
+          <div className="flex flex-col gap-2.5 ">
             <label className="text-base font-normal leading-[22.4px] text-sky-2">
               Add a description
             </label>

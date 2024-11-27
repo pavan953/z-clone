@@ -1,0 +1,42 @@
+/* github-dark-theme.css */
+body {
+    background-color: #0d1117; /* Dark background */
+    color: #c9d1d9; /* Light gray text */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.github-dark-theme {
+    background-color: #212933; /* Slightly lighter dark background for content */
+    color: #c9d1d9; /* Light gray text */
+    border: 1px solid #30363d; /* Dark gray border */
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(27, 31, 35, 0.12);
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.github-dark-theme h1, .github-dark-theme h2, .github-dark-theme h3, .github-dark-theme h4, .github-dark-theme h5, .github-dark-theme h6 {
+    color: #58a6ff; /* Blue headings */
+}
+
+.github-dark-theme a {
+    color: #58a6ff; /* Blue links */
+    text-decoration: none;
+}
+
+.github-dark-theme a:hover {
+    text-decoration: underline;
+}
+
+.github-dark-theme code {
+    background-color: rgba(110, 118, 129, 0.4); /* Dark gray background for code */
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+}
+
+.github-dark-theme pre {
+    background-color: rgba(110, 118, 129, 0.4); /* Dark gray background for preformatted text */
+    padding: 16px;
+    border-radius: 6px;
+    overflow: auto;
+}

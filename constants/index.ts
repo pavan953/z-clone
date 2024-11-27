@@ -25,6 +25,11 @@ export const sidebarLinks = [
     route: '/personal-room',
     label: 'Personal Room',
   },
+  {
+    imgURL: '/icons/PDF-icon.svg',
+    route: '/pdf-reader',
+    label: 'PDF Reader',
+  },
 ];
 
 export const avatarImages = [
