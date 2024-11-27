@@ -95,10 +95,10 @@ const MeetingRoom = () => {
             <Users size={20} className="text-[#c9d1d9]" />
           </div>
         </button>
-        <button onClick={()=>Chat()}>
-        <div className="cursor-pointer rounded-2xl bg-[#19232d] px-4 py-2 hover:bg-[#4c535b]">
-          <MessageCircle size={20} className="text-[#c9d1d9]" />
-        </div>
+        <button onClick={() => Chat({ someProp: 'value' })}>
+          <div className="cursor-pointer rounded-2xl bg-[#19232d] px-4 py-2 hover:bg-[#4c535b]">
+            <MessageCircle size={20} className="text-[#c9d1d9]" />
+          </div>
         </button>
         {!isPersonalRoom && <EndCallButton />}
       </div>
